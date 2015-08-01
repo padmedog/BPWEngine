@@ -1,0 +1,26 @@
+BPW Engine Help File
+Press escape or click anywhere to go back
+
+1.Controls
+2.View
+3.Minimap
+
+1. Controls
+-Move: WASD
+-Look: Mouse
+-Lean: QE
+
+
+2. View
+The view for this engine is mostly unlike any other normal view.
+The best thing about it is that it supported view rotation,
+not only on the 2 axises, pitch and direction, it adds another
+for the rotation of the view.
+-Z Axis is for direction
+-Y Axis is for pitch
+-X Axis is for rotation
+
+
+3. Minimap
+The minimap basically takes certain blocks, draws them to a surface,
+then draws a part of the surface on the top right of the screen.

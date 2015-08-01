@@ -1,0 +1,18 @@
+//d3d_draw_block_rep(x1,y1,z1,x2,y2,z2,texture,hrepeat,vrepeat,frepeat);
+var x1, x2, y1, y2, z1, z2,tex , hrepeat, vrepeat, frepeat; 
+x1 = min(argument0,argument3);
+y1 = min(argument1,argument4);
+z1 = min(argument2,argument5);
+x2 = max(argument0,argument3);
+y2 = max(argument1,argument4);
+z2 = max(argument2,argument5);
+tex = argument6;
+hrepeat = argument7;
+vrepeat = argument8;
+frepeat = argument9;
+d3d_draw_wall(x1,y2,z1,x1,y1,z2,tex,hrepeat,vrepeat);
+d3d_draw_wall(x1,y1,z1,x2,y1,z2,tex,frepeat,vrepeat);
+d3d_draw_wall(x2,y2,z1,x1,y2,z2,tex,frepeat,vrepeat);
+d3d_draw_wall(x1,y2,z1,x2,y2,z2,tex,hrepeat,vrepeat);
+d3d_draw_floor(x1,y1,z1,x2,y2,z1,tex,hrepeat,frepeat);
+d3d_draw_floor(x2,y2,z2,x1,y1,z2,tex,hrepeat,frepeat);
