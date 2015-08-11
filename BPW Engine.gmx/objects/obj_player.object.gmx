@@ -156,9 +156,9 @@ if can_look
     window_mouse_set(window_get_width()/2,window_get_height()/2);
 }
 if (keyboard_check_pressed(ord("V")) &amp;&amp; !obj_pause.pause) || keyboard_check_pressed(vk_escape) can_look = !can_look;
-dir = mean(dir,dir,dir,dir,dir,dir,rdir);
-pit = mean(pit,pit,pit,pit,pit,pit,rpit);
-rot = mean(rot,rot,rot,rot,rot,rot,0);
+dir = mean(dir,dir,dir,rdir);
+pit = mean(pit,pit,pit,rpit);
+rot = mean(rot,rot,rot,0);
 headz = mean(headz,headz,headz,headz,(!crouch*24)+24);
 if dir &gt; 360
 {
@@ -447,7 +447,8 @@ draw_set_alpha(alph);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>d3d_set_fog(obj_control.fog_enabled,obj_control.fog_color,obj_control.fog_start,obj_control.fog_end);
+            <string>//d3d_set_fog(true,obj_control.fog_color,obj_control.fog_start,obj_control.fog_end);
+//d3d_set_fog(true,c_black,0,256);
 </string>
           </argument>
         </arguments>

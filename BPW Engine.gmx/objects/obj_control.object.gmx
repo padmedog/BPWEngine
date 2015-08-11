@@ -26,15 +26,39 @@
           <argument>
             <kind>1</kind>
             <string>fog_color = c_black;
-fog_enabled = false//true;
-fog_start = 0;
-fog_end = 512;
+fog_enabled = true;
+fog_start = 64;
+fog_end = 256;
 ini_open("data.ini");
 fog_color = ini_read_real("metaroom",room_get_name(room) + "_fcol",fog_color);
 //fog_enabled = ini_read_real("metaroom",room_get_name(room) + "_fena",fog_enabled);
 fog_start = ini_read_real("metaroom",room_get_name(room) + "_fsta",fog_start);
 fog_end = ini_read_real("metaroom",room_get_name(room) + "_fend",fog_end);
 ini_close();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(keyboard_check_pressed(vk_left))
+    fog_enabled = !fog_enabled;
 </string>
           </argument>
         </arguments>
@@ -84,6 +108,29 @@ d3d_end();
             <string>d3d_start();
 draw_set_color(c_white);
 d3d_set_culling(true);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>d3d_set_fog(true,fog_color,fog_start,fog_end);
 </string>
           </argument>
         </arguments>

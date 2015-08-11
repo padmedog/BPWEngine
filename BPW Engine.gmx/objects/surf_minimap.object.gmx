@@ -177,6 +177,7 @@ if keyboard_check_pressed(vk_tab) enabled = !enabled;
     surface_reset_target();
     d3d_start();
     d3d_set_fog(obj_control.fog_enabled,obj_control.fog_color,obj_control.fog_start,obj_control.fog_end);
+    //d3d_set_fog(true,obj_control.fog_color,obj_control.fog_start,obj_control.fog_end);
     draw_set_color(col);
 }
 </string>

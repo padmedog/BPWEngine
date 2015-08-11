@@ -221,6 +221,8 @@
     <sprite>sprites\spr_wall2_horiz</sprite>
     <sprite>sprites\spr_wall3_verti</sprite>
     <sprite>sprites\spr_wall3_horiz</sprite>
+    <sprite>sprites\spr_buildingside_verti</sprite>
+    <sprite>sprites\spr_buildingside_horiz</sprite>
     <sprite>sprites\spr_slidingdoor_verti</sprite>
     <sprite>sprites\spr_floor1</sprite>
     <sprite>sprites\spr_wedgetest</sprite>
@@ -290,6 +292,8 @@
     <background>background\tex_buildingfront</background>
     <background>background\tex_solidfloor</background>
     <background>background\tex_solidceiling</background>
+    <background>background\tex_buildingglassside</background>
+    <background>background\tex_rooftop</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\pth_cam</path>
@@ -380,6 +384,7 @@
       <object>objects\obj_wall1_horiz</object>
       <object>objects\obj_futuredoor_horiz</object>
       <object>objects\obj_futuredoor_verti</object>
+      <object>objects\obj_buildingside_verti</object>
       <object>objects\obj_floor1</object>
       <object>objects\obj_floor2</object>
       <object>objects\obj_floor_special</object>

@@ -49,6 +49,6 @@ dy = y+lengthdir_y(720,dir2);
 if render
 {
     draw_set_color(c_black);
-    draw_triangle(ax,ay,bx,by,dx,dy,false);
-    draw_triangle(ax,ay,cx,cy,dx,dy,false);
+    draw_triangle(bx,by,ax,ay,dx,dy,false);
+    draw_triangle(bx,by,cx,cy,dx,dy,false);
 }

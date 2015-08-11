@@ -56,7 +56,7 @@ wall_tex = global.texture_wall[choose(0,1,2,3)]
             <string>var cancheck = true;
 if(obj_control.fog_enabled)
 {
-    if(rectangle_in_circle(x-(sprite_width/2),y,x+(sprite_width/2),y+sprite_height
+    if(!rectangle_in_circle(x-(sprite_width/2),y,x+(sprite_width/2),y+sprite_height
         ,obj_camera.x,obj_camera.y,obj_control.fog_end))
     {
         cancheck = false;

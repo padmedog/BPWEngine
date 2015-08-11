@@ -106,7 +106,7 @@ draw_set_blend_mode(bm_subtract);
 draw_sprite(spr_tex_light,0,obj_camera.x-x,obj_camera.y-y);
 
 draw_set_blend_mode(bm_normal);
-d3d_set_fog(obj_control.fog_enabled,obj_control.fog_color,obj_control.fog_start,obj_control.fog_end);
+d3d_set_fog(true,obj_control.fog_color,obj_control.fog_start,obj_control.fog_end);
 draw_set_color(col);
 </string>
           </argument>
@@ -131,7 +131,7 @@ draw_set_color(col);
           <argument>
             <kind>1</kind>
             <string>var cancheck = true;
-if obj_control.fog_enabled
+//if obj_control.fog_enabled
     {if point_distance(x,y,obj_player.x,obj_player.y) 
         &gt; obj_control.fog_end*1.5 cancheck = false}
 if cancheck

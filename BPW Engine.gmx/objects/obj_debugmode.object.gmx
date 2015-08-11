@@ -109,6 +109,9 @@ if debugging &amp;&amp; inLevel()
                 draw_text(0,180,"fps/real: " + string(fps) + " , " + string(fps_real));
                 draw_text(0,200,"text XY: " + string(xpos) + " , " + string(ypos));
                 draw_text(0,220,"shake XY: " + string(obj_screenshake.x) + " , " + string(obj_screenshake.y));
+                draw_text(0,240,"fog_enabled: " + boolToString(obj_control.fog_enabled));
+                draw_text(0,260,"fog_start: " + string(obj_control.fog_start));
+                draw_text(0,280,"fog_end: " + string(obj_control.fog_end));
             }
             else
             {
@@ -124,6 +127,9 @@ if debugging &amp;&amp; inLevel()
                 draw_text(0,180,"fps/real: " + toBase(fps,12) + " , " + toBase(fps_real,12));
                 draw_text(0,200,"text XY: " + toBase(xpos,12) + " , " + toBase(ypos,12));
                 draw_text(0,220,"shake XY: " + toBase(obj_screenshake.x,12) + " , " + toBase(obj_screenshake.y,12));
+                draw_text(0,240,"fog_enabled: " + boolToString(obj_control.fog_enabled));
+                draw_text(0,260,"fog_start: " + toBase(obj_control.fog_start,12));
+                draw_text(0,280,"fog_end: " + toBase(obj_control.fog_end,12));
             }
             break;
         case current2:
