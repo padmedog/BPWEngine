@@ -74,7 +74,8 @@ trigger = false;
         switch(current)
         {
             case 0:
-                room_goto(rm_lvl1);
+                //room_goto(rm_lvl1);
+                room_restart();
                 break;
             case 2:
                 trigger = true;

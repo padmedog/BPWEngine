@@ -242,11 +242,14 @@
     <sprite>sprites\spr_road_verti</sprite>
     <sprite>sprites\spr_road_horiz</sprite>
     <sprite>sprites\spr_spinnyobject</sprite>
+    <sprite>sprites\spr_multispinnyobject</sprite>
     <sprite>sprites\spr_button</sprite>
     <sprite>sprites\spr_futuredoor</sprite>
     <sprite>sprites\spr_futuredoor_horiz</sprite>
     <sprite>sprites\spr_futuredoor_verti</sprite>
+    <sprite>sprites\spr_tex_light</sprite>
     <sprite>sprites\spr_floor2</sprite>
+    <sprite>sprites\spr_sfloor</sprite>
     <sprite>sprites\spr_boxcollider</sprite>
     <sprite>sprites\spr_boxcollider_block</sprite>
     <sprite>sprites\spr_boxcollider_wall_verti</sprite>
@@ -301,6 +304,7 @@
       <script>scripts\pos_x.gml</script>
       <script>scripts\pos_y.gml</script>
       <script>scripts\pos_z.gml</script>
+      <script>scripts\translate_point_e_3d_old.gml</script>
       <script>scripts\translate_point_e_3d.gml</script>
     </scripts>
     <script>scripts\translate_point_e.gml</script>
@@ -355,6 +359,7 @@
       <object>objects\obj_debugmode</object>
       <object>objects\obj_gameoptions</object>
       <object>objects\obj_screenshake</object>
+      <object>objects\surf_floor_special</object>
     </objects>
     <objects name="world">
       <object>objects\obj_player</object>
@@ -366,6 +371,7 @@
       <object>objects\obj_laser</object>
       <object>objects\obj_whiteblock</object>
       <object>objects\obj_spinnyobject</object>
+      <object>objects\obj_multispinnyobject</object>
       <object>objects\obj_playeviewblock</object>
       <object>objects\obj_wtexblock</object>
       <object>objects\obj_window_verti</object>
@@ -376,6 +382,7 @@
       <object>objects\obj_futuredoor_verti</object>
       <object>objects\obj_floor1</object>
       <object>objects\obj_floor2</object>
+      <object>objects\obj_floor_special</object>
       <object>objects\obj_wedgetest</object>
       <object>objects\obj_elevator</object>
       <object>objects\obj_slidingdoor_verti</object>
@@ -405,6 +412,7 @@
     <room>rooms\rm_levelselect</room>
     <room>rooms\rm_lvl1_old</room>
     <room>rooms\rm_lvl1</room>
+    <room>rooms\rm_lvl2</room>
   </rooms>
   <constants number="2">
     <constant name="GM_build_date">41930.7949755556</constant>

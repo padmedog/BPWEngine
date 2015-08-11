@@ -1,0 +1,24 @@
+animations;
+ - visual (view movemenet)
+ - physical (model rotation/movement)
+rotation;
+ - 3 axes
+external files;
+ - textures
+ - sounds?
+ - rooms?
+visual effects;
+ - static
+ - colorful static (somewhat rectangular?)
+ - flash (like being hit with flashbang)
+texture effects (surfaces);
+ - lighting
+ - images
+eval;
+ - ex: audio_play_sound(snd_sound,false,4); as a string for input, will be executed
+flat textures;
+ - rectangles/polygons that face the camera, to appear as a flat, unchanged images
+options ini;
+ - options ini file, so it will load into the game on startup
+fixed jumping;
+ - when jumping directly under a collider, it tries to continue jumping

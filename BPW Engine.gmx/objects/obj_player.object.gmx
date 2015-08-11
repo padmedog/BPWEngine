@@ -447,7 +447,7 @@ draw_set_alpha(alph);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>d3d_set_fog(true,c_black,0,256);
+            <string>d3d_set_fog(obj_control.fog_enabled,obj_control.fog_color,obj_control.fog_start,obj_control.fog_end);
 </string>
           </argument>
         </arguments>
