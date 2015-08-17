@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>z = 0;
 zheight = 64;
+material = 0;
 image_xscale = 2/3;
 x *= 2;
 y *= 2;

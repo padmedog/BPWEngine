@@ -115,7 +115,7 @@ if keyboard_check_pressed(vk_tab) enabled = !enabled;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if enabled draw_surface_part(surf,obj_player.x-128,obj_player.y-128,256,256
+            <string>if enabled draw_surface_part(surf,floor(obj_player.x-128),floor(obj_player.y-128),256,256
     ,(window_get_width()-272)+((obj_cmpath.x/2)*obj_player.movespeed*obj_player.running)
     ,16+((obj_cmpath.y/2)*obj_player.movespeed*obj_player.running));
 </string>
@@ -155,8 +155,8 @@ if keyboard_check_pressed(vk_tab) enabled = !enabled;
         if /*get_visible(obj_player.x,obj_player.y)*/ rectangle_in_rectangle(obj_player.x-192,obj_player.y-192,obj_player.x+192,obj_player.y+192,x,y,x+sprite_width,y+sprite_width)
         {
             draw_rectangle(x-2,y,x+2,y+sprite_height,false);
-            draw_shadow(obj_player.x-playerwidth,obj_player.y-playerheight);
-            draw_shadow(obj_player.x+playerwidth,obj_player.y+playerheight);
+            //draw_shadow(obj_player.x-playerwidth,obj_player.y-playerheight);
+            //draw_shadow(obj_player.x+playerwidth,obj_player.y+playerheight);
         }
     }
     with(obj_wall1_horiz)
@@ -164,8 +164,8 @@ if keyboard_check_pressed(vk_tab) enabled = !enabled;
         if /*get_visible(obj_player.x,obj_player.y)*/ rectangle_in_rectangle(obj_player.x-192,obj_player.y-192,obj_player.x+192,obj_player.y+192,x,y,x+sprite_width,y+sprite_width)
         {
             draw_rectangle(x,y,x+sprite_width,y+sprite_height,false);
-            draw_shadow(obj_player.x-playerwidth,obj_player.y-playerheight);
-            draw_shadow(obj_player.x+playerwidth,obj_player.y+playerheight);
+            //draw_shadow(obj_player.x-playerwidth,obj_player.y-playerheight);
+            //draw_shadow(obj_player.x+playerwidth,obj_player.y+playerheight);
         }
     }
     draw_set_color(c_yellow);

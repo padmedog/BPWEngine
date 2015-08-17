@@ -90,7 +90,7 @@ rot = (obj_player.movespeed*obj_cmpath.x/12);
         )+obj_screenshake.y//+(lengthdir_y(z,-(obj_player.rot-90)))
     ,1,(obj_cmpath.x/49)*obj_player.movespeed//+(lengthdir_x(obj_player.headz,-(obj_player.rot-90)))
     ,(obj_cmpath.y/(49-(obj_player.running*6)))*obj_player.movespeed//+(lengthdir_y(z,-(obj_player.rot-90)))
-    ,0,0,1,60,window_get_width()/window_get_height(),1,obj_control.fog_end);
+    ,0,0,1,60,window_get_width()/window_get_height(),1,obj_control.fog_end+1);
 </string>
           </argument>
         </arguments>

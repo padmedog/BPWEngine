@@ -69,7 +69,7 @@ if keyboard_check_pressed(vk_enter) || (mouse_check_button_pressed(mb_left)
     switch(current)
     {
         case 0:
-            room_goto(rm_lvl1_old);
+            room_goto(rm_lvl2);
             break;
         case 4:
             room_goto(rm_options);

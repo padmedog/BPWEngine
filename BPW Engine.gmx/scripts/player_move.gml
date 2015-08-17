@@ -2,6 +2,11 @@ cantmove_x = false;
 cantmove_y = false;
 cantmove_z = false;
 zspeed -= 0.5;
+
+xspeed = clamp(xspeed,-max_xspeed,max_xspeed);
+yspeed = clamp(yspeed,-max_yspeed,max_yspeed);
+zspeed = clamp(zspeed,-max_zspeed,max_zspeed);
+
 with(obj_boxcollider)
 {
     var offset_ = 0.01
@@ -50,6 +55,10 @@ with(obj_boxcollider)
             other.cantmove_z = true;
         }
     }
+    if(other.cantmove_z)
+    {
+        obj_player.material = material;
+    }
 }
 
 var tempcantx = cantmove_x;
@@ -73,8 +82,5 @@ else
     z += zspeed;
 
 return tempcantx||tempcanty;
-
-
-
 
 

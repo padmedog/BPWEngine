@@ -56,7 +56,7 @@ d3d_transform_set_identity();
 d3d_transform_add_rotation_z(360-obj_camera.dir);
 d3d_transform_add_rotation_y(360-obj_camera.pit);
 d3d_transform_add_rotation_x(obj_camera.rot);
-d3d_draw_floor(pos_x(x),pos_y(y),pos_z(0),pos_x(x)+(sprite_width),pos_y(y)+(sprite_height),pos_z(0),global.texture_roadverti,sprite_width/basewidth,sprite_height/baseheight);
+d3d_draw_floor(pos_x(x)+(sprite_width),pos_y(y),pos_z(0),pos_x(x),pos_y(y)+(sprite_height),pos_z(0),global.texture_roadverti,sprite_width/basewidth,sprite_height/baseheight);
 d3d_transform_set_identity();
 draw_set_color(col);
 </string>

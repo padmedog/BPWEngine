@@ -35,6 +35,7 @@ fog_color = ini_read_real("metaroom",room_get_name(room) + "_fcol",fog_color);
 fog_start = ini_read_real("metaroom",room_get_name(room) + "_fsta",fog_start);
 fog_end = ini_read_real("metaroom",room_get_name(room) + "_fend",fog_end);
 ini_close();
+//tex_skybox = global.texture_sky;
 </string>
           </argument>
         </arguments>
@@ -130,7 +131,27 @@ d3d_set_culling(true);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>d3d_set_fog(true,fog_color,fog_start,fog_end);
+            <string>if(room == rm_lvl2)
+{
+    d3d_set_fog(false,fog_color,fog_start,fog_end);
+    var col = draw_get_color();
+    draw_set_color(c_white);
+    d3d_transform_set_identity();
+    d3d_transform_add_rotation_z(360-obj_camera.dir);
+    d3d_transform_add_rotation_y(360-obj_camera.pit);
+    d3d_transform_add_rotation_x(obj_camera.rot);
+    //d3d_draw_ellipsoid(fog_end,fog_end,fog_end,-fog_end,-fog_end,-fog_end,tex_skybox,4,4,24);
+    var temp_fog_end = fog_end/sqrt(3);
+    d3d_draw_wall(temp_fog_end,-temp_fog_end,-temp_fog_end,-temp_fog_end,-temp_fog_end,temp_fog_end,global.texture_skylands_left,1,1);
+    d3d_draw_wall(-temp_fog_end,-temp_fog_end,-temp_fog_end,-temp_fog_end,temp_fog_end,temp_fog_end,global.texture_skylands_back,1,1);
+    d3d_draw_wall(-temp_fog_end,temp_fog_end,-temp_fog_end,temp_fog_end,temp_fog_end,temp_fog_end,global.texture_skylands_right,1,1);
+    d3d_draw_wall(temp_fog_end,temp_fog_end,-temp_fog_end,temp_fog_end,-temp_fog_end,temp_fog_end,global.texture_skylands_front,1,1);
+    d3d_draw_floor(temp_fog_end,temp_fog_end,temp_fog_end,-temp_fog_end,-temp_fog_end,temp_fog_end,global.texture_skylands_top,1,1);
+    d3d_draw_floor(temp_fog_end,-temp_fog_end,-temp_fog_end,-temp_fog_end,temp_fog_end,-temp_fog_end,global.texture_skylands_bottom,1,1);
+    d3d_transform_set_identity();
+    draw_set_color(col);
+}
+d3d_set_fog(true,fog_color,fog_start,fog_end);
 </string>
           </argument>
         </arguments>

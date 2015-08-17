@@ -257,6 +257,9 @@
     <sprite>sprites\spr_boxcollider_wall_verti</sprite>
     <sprite>sprites\spr_boxcollider_wall_horiz</sprite>
     <sprite>sprites\spr_boxcollider_floor</sprite>
+    <sprite>sprites\spr_rooftop0</sprite>
+    <sprite>sprites\spr_bpwengineiconx256</sprite>
+    <sprite>sprites\spr_bpwengineiconx256_fade</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tex_white</background>
@@ -294,6 +297,12 @@
     <background>background\tex_solidceiling</background>
     <background>background\tex_buildingglassside</background>
     <background>background\tex_rooftop</background>
+    <background>background\tex_skylands_bottom</background>
+    <background>background\tex_skylands_front</background>
+    <background>background\tex_skylands_right</background>
+    <background>background\tex_skylands_back</background>
+    <background>background\tex_skylands_left</background>
+    <background>background\tex_skylands_top</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\pth_cam</path>
@@ -336,6 +345,7 @@
     <script>scripts\shake_screen.gml</script>
     <script>scripts\box_in_box.gml</script>
     <script>scripts\cylinder_in_box.gml</script>
+    <script>scripts\circle_circ.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\sh_rimLight.shader</shader>
@@ -364,6 +374,8 @@
       <object>objects\obj_gameoptions</object>
       <object>objects\obj_screenshake</object>
       <object>objects\surf_floor_special</object>
+      <object>objects\obj_title</object>
+      <object>objects\obj_screenshot</object>
     </objects>
     <objects name="world">
       <object>objects\obj_player</object>
@@ -385,6 +397,8 @@
       <object>objects\obj_futuredoor_horiz</object>
       <object>objects\obj_futuredoor_verti</object>
       <object>objects\obj_buildingside_verti</object>
+      <object>objects\obj_buildingside_horiz</object>
+      <object>objects\obj_rooftop0</object>
       <object>objects\obj_floor1</object>
       <object>objects\obj_floor2</object>
       <object>objects\obj_floor_special</object>

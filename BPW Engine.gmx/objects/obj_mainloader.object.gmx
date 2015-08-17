@@ -56,6 +56,12 @@ for(i = 0; i &lt; sprite_get_number(spr_futuredoor); i++)
     global.texture_futuredoor[i] = sprite_get_texture(spr_futuredoor,i);
 global.texture_buildingside_glass = background_get_texture(tex_buildingglassside);
 global.texture_rooftop = background_get_texture(tex_rooftop);
+global.texture_skylands_top = background_get_texture(tex_skylands_top);
+global.texture_skylands_bottom = background_get_texture(tex_skylands_bottom);
+global.texture_skylands_left = background_get_texture(tex_skylands_left);
+global.texture_skylands_right = background_get_texture(tex_skylands_right);
+global.texture_skylands_back = background_get_texture(tex_skylands_back);
+global.texture_skylands_front = background_get_texture(tex_skylands_front);
 //model_load_housemodel();
 //model_load_buildingside();
 //model_load_buildingfront();

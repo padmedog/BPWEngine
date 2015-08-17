@@ -70,9 +70,8 @@ if(cancheck)
     d3d_transform_add_rotation_z(360-obj_camera.dir);
     d3d_transform_add_rotation_y(360-obj_camera.pit);
     d3d_transform_add_rotation_x(obj_camera.rot);
-    //d3d_draw_block(pos_x(x-2),pos_y(y)+sprite_height,pos_z(z)+zheight,pos_x(x+sprite_width+2),pos_y(y),pos_z(z),wall_tex,1,1);
-    d3d_draw_wall(pos_x(x),pos_y(y+sprite_height),pos_z(z+zheight),pos_x(x),pos_y(y),pos_z(z),wall_tex,1,1);
-    d3d_draw_wall(pos_x(x),pos_y(y),pos_z(z+zheight),pos_x(x),pos_y(y+sprite_height),pos_z(z),wall_tex,1,1);
+    d3d_draw_wall(pos_x(x),pos_y(y+sprite_height),pos_z(z+zheight),pos_x(x),pos_y(y),pos_z(z),global.texture_buildingside_glass,16,24);
+    d3d_draw_wall(pos_x(x),pos_y(y),pos_z(z+zheight),pos_x(x),pos_y(y+sprite_height),pos_z(z),global.texture_buildingside_glass,16,24);
     d3d_transform_set_identity();
     draw_set_color(col);
 }

@@ -47,6 +47,10 @@ crouch = false;
 cantmove_x = false;
 cantmove_y = false;
 cantmove_z = false;
+var spd_ = 31;
+max_xspeed = spd_;
+max_yspeed = spd_;
+max_zspeed = spd_;
 //gamestuff
 mouse_sensitivity = 3;
 can_look = true;
@@ -64,8 +68,11 @@ pathyspeed = 0;
 prevpathyspeed = 0;
 canpath = true;
 //playerpos
-x *= 2;
-y *= 2;
+if(room != rm_lvl2)
+{
+    x *= 2;
+    y *= 2;
+}
 
 //keys
 /*
@@ -254,11 +261,7 @@ energy = clamp(energy,0,128);
 
 rot += (obj_cmpath.x/50)*movespeed*running;
 
-var floorpoint = collision_point(x,y,par_floor,false,true);
-if floorpoint != noone
 {
-    material = floorpoint.material;
-    
     var snd;
     switch(material)
     {
@@ -273,19 +276,24 @@ if floorpoint != noone
             snd = choose(/*snd_dirtstep00,snd_dirtstep01*/snd_dirtstepnew00,snd_dirtstepnew01,
                 snd_dirtstepnew02,snd_dirtstepnew03);
             break;
-        default:
+        default: //choose any
             snd = choose(snd_boardstep00,snd_boardstep01,snd_boardstep02,snd_boardstep03,
                 snd_boardstep04,snd_boardstep05,snd_boardstep06,snd_dirtstep00,snd_dirtstep01
                 ,snd_woodstep00,snd_woodstep01,snd_woodstep02);
     }
-
+    
     if sped &lt; 0 &amp;&amp; !audio_is_playing_steps() &amp;&amp; ismoving &amp;&amp; prevpathyspeed &gt; pathyspeed &amp;&amp; canpath
     {
         audio_play_sound(snd,5,false);
         canpath = false;
-        alarm[0] = 10;
+        //alarm[0] = 10;
     }
 }
+if(prevpathyspeed &lt; pathyspeed)
+{
+    canpath = true;
+}
+
 if keyboard_check(ord("E"))
 {
     rot -= 1;
@@ -317,8 +325,9 @@ if keyboard_check(ord("Q"))
     }
 }*/
 
-xspeed /= 1.7+(crouch/4);
-yspeed /= 1.7+(crouch/4);
+var factor_ = 1.4;
+xspeed /= factor_+(crouch/4);
+yspeed /= factor_+(crouch/4);
 
 
 var cantmove = player_move();
